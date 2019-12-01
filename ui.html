@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./ui.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+      integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"
+    ></script>
+    <title>EPG</title>
+  </head>
+  <body>
+    <div class="">
+      <nav class="navbar navbar-expand-md fixed-top">
+        <ul class="navbar-nav mr-auto" style="display: inline">
+          <li class="nav-item  ">
+            <img src="./menu.svg" style="width:3rem; height:3rem;" />
+          </li>
+          <!-- <li class="nav-item justify-content-end">
+            <img src="./left-arrow.svg" style="width:3rem; height:3rem;" />
+          </li> -->
+        </ul>
+        <ul class="navbar-nav inline-navbar">
+          <li class="nav-item shade ">
+            <img src="./settings.svg" id="gear" />
+            <span id="settings">SENDERLISTE</span>
+          </li>
+          <li class="nav-item shade" id="help">
+            <span>
+              <img
+                src="./question-mark.svg"
+                style="width:1.5rem; height:1.5rem;"
+              />
+              HILFE</span
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <img src="./search.svg" style="width:3rem; height:3rem;" />
+          </li>
+        </ul>
+      </nav>
+      <div></div>
+      <nav class="navbar navbar-expand-md fixed-bottom">
+        <ul class="navbar-nav inline-navbar">
+          <li class="nav-item">
+            <img
+              src="./bullet.svg"
+              style="width:2.5rem; height:2.5rem; border: .5px solid; padding:4px ; background-color: rgba(255, 255, 255, 0.557); border-top-left-radius:5px; border-bottom-left-radius:5px; border: none; color: white;"
+            />
+          </li>
+          <li class="nav-item">
+            <span>
+              <img src="./browser.svg" style="width:2.6rem; height:2.5rem;" />
+            </span>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item shade ">
+            <img src="./history.svg" id="gear" />
+            <span id="settings">Heute 21 Uhr</span>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto" id="boxes">
+          <li class="nav-item " id="box">
+            <span id="subscript">AB</span> JEZTZ
+          </li>
+          <li class="nav-item " id="box">
+            <span id="subscript">AB</span> 20:15
+          </li>
+          <li class="nav-item " id="box">
+            <span id="subscript">AB</span> 22:15
+          </li>
+        </ul>
+      </nav>
+      <div class="row">
+        <div class="col-3 channel">
+          <ul class="channel-list">
+            <li>
+                <div class="channels1">nBS</div>
+            </li>
+            <li>
+                <div class="channels1">CBS</div>
+            </li>
+            <li>
+                <div class="channels1">BBC</div>
+            </li>
+            <li>
+                <div class="channels1">BBC</div>
+            </li>
+            <li>
+                <div class="channels1">BBC</div>
+            </li>
+            <li>
+                <div class="channels1">BBC</div>
+            </li>
+            <li>
+                <div class="channels1">BBC</div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-9 showlist">
+            <ul class="show-grid">
+                <li class="col-md-12 col-xs-12 col-sm-12 container-fluid channels-row">
+                  <div class="show" style="width: 40%;">
+                    <div class="show-time">19:55  <span id="hd">HD</span> <span id="live"> LIVE</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops</span>
+                    </div>
+                  </div>
+                  <div class="show" style="width: 30%;">
+                    <div class="show-time">22:55  <span id="hd">HD</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Outlander</span>
+                    </div>
+                  </div>
+                  
+                </li>
+                
+                <li class="col-md-12 col-xs-12 col-sm-12 container-fluid channels-row">
+                  <div class="show" style="width: 30%;">
+                    <div class="show-time">19:55 </div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops</span>
+                    </div>
+                  </div>
+                  
+                          
+                  <div class="show" style="width: 40%;">
+                    <div class="show-time">19:55<span id="hd">HD</span> <span id="live"> LIVE</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops</span>
+                    </div>
+                  </div>
+                  
+                </li>
+                
+                <li class="col-md-12 col-xs-12 col-sm-12 container-fluid channels-row">
+                  <div class="show" style="width: 40%;">
+                    <div class="show-time">19:55<span id="live"> LIVE</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops repeat</span>
+                    </div>
+                  </div>
+                    
+                  <div class="show" style="width: 30%;">
+                    <div class="show-time">19:55  </div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops Entwinkler</span>
+                    </div>
+                  </div>
+                </li>
+                
+                <li class="col-md-12 container-fluid channels-row">
+                  <div class="show" style="width: 30%;">
+                    <div class="show-time">19:55<span id="live"> LIVE</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                    </div>
+                  </div>
+                    
+                  <div class="show" style="width: 40%;">
+                  <div class="show-time">19:55<span id="live"> LIVE</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                    </div>
+                  </div>
+                </li>
+                
+                <li class="col-md-12 container-fluid channels-row">
+                  <div class="show" style="width: 30%;">
+                    <div class="show-time">19:55<span id="live"> LIVE</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                    </div>
+                  </div>
+                    
+                  <div class="show" style="width: 40%;">
+                    <div class="show-time">19:55<span id="live"> LIVE</span></div>
+                  <div class="listings-details">
+                    <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                  </div>
+                  </div>
+                </li>
+
+                <li class="col-md-12 container-fluid channels-row">
+                  <div class="show" style="width: 30%;">
+                    <div class="show-time">19:55<span id="live"> LIVE</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                    </div>
+                  </div>
+                    
+                  <div class="show" style="width: 40%;"><div class="show-time">19:55<span id="live"> LIVE</span></div>
+                  <div class="listings-details">
+                    <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                  </div>
+                </li>
+
+                <li class="col-md-12 container-fluid channels-row">
+                  <div class="show" style="width: 30%;">
+                    <div class="show-time">19:55<span id="live"> LIVE</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                    </div>
+                  </div>
+                    
+                  <div class="show" style="width: 40%;"><div class="show-time">19:55<span id="live"> LIVE</span></div>
+                  <div class="listings-details">
+                    <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                  </div>
+                </li>
+
+                <li class="col-md-12 container-fluid channels-row">
+                  <div class="show" style="width: 30%;">
+                    <div class="show-time">19:55<span id="live"> LIVE</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                    </div>
+                  </div>
+                    
+                  <div class="show" style="width: 40%;"><div class="show-time">19:55<span id="live"> LIVE</span></div>
+                  <div class="listings-details">
+                    <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                  </div>
+                  </div>
+                </li>
+
+                <li class="col-md-12 container-fluid channels-row">
+                  <div class="show" style="width: 30%;">
+                    <div class="show-time">19:55<span id="live"> LIVE</span></div>
+                    <div class="listings-details">
+                      <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                    </div>
+                  </div>
+                    
+                  <div class="show" style="width: 40%;"><div class="show-time">19:55<span id="live"> LIVE</span></div>
+                  <div class="listings-details">
+                    <span class="lineup-title"> Die RosenHeim-Cops Some</span>
+                  </div>
+                </li>
+                
+              </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
